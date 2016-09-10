@@ -1,0 +1,51 @@
+{
+  "name": "prezo",
+  "version": "0.0.1",
+  "description": "Easy presentations",
+  "main": "./lib/index.js",
+  "scripts": {
+    "start": "start-storybook -p 9001 -s ./stories -c .storybook",
+    "build": "babel ./src -d lib",
+    "prepublish-to-npm": "git pull && npm run build && git add . && git commit -m 'Prepare for publishing'",
+    "publish-to-npm": "(git pull origin master && npm version patch && git push origin master && npm publish && git push --tags)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandrowd/prezo.git"
+  },
+  "keywords": [
+    "react-component",
+    "presentation",
+    "react",
+    "prezo",
+    "keynote",
+    "powerpoint",
+    "html",
+    "template"
+  ],
+  "author": "Leandro Lemos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leandrowd/prezo/issues"
+  },
+  "homepage": "https://github.com/leandrowd/prezo#readme",
+  "devDependencies": {
+    "@kadira/storybook": "^2.12.1",
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "css-loader": "^0.25.0",
+    "gh-pages": "^0.11.0",
+    "node-sass": "^3.9.3",
+    "react": "^0.14.5",
+    "react-dom": "^0.14.2",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1"
+  },
+  "dependencies": {
+    "react-responsive-carousel": "^3.0.16"
+  }
+}
